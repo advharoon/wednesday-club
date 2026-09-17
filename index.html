@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Wednesday Club | The Doctrine of Legitimate Expectation</title>
+<meta name="description" content="The Wednesday Club — The Doctrine of Legitimate Expectation: Estopped or Entitled?">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<style>
+:root{--maroon:#4b1313;--maroon2:#651d1d;--gold:#c49a4a;--gold2:#e0bd72;--cream:#f7f2e9;--paper:#fffdf9;--ink:#292321;--muted:#756b63;--line:#e5d9c9}
+html{scroll-behavior:smooth} body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,Arial,sans-serif}
+h1,h2,h3,h4,.serif{font-family:Georgia,"Times New Roman",serif}
+.navbar{background:rgba(75,19,19,.98);box-shadow:0 2px 15px rgba(0,0,0,.15)}
+.navbar-brand{color:#fff!important;font-family:Georgia,serif;font-weight:700;letter-spacing:.8px}
+.nav-link{color:#fff!important;margin-left:18px}.nav-link:hover{color:var(--gold2)!important}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#4b1313 0%,#651d1d 55%,#3a0d0d 100%);color:#fff;padding:82px 0 72px}
+.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(224,189,114,.18),transparent 34%);pointer-events:none}
+.hero-inner{position:relative;z-index:1}.eyebrow{color:var(--gold2);text-transform:uppercase;letter-spacing:2px;font-size:.82rem;font-weight:700}
+.hero h1{font-size:clamp(2.5rem,5vw,4.6rem);line-height:1.05;margin:14px 0}
+.hero h2{color:#f2d99d;font-size:clamp(1.4rem,3vw,2.25rem);font-weight:400}
+.hero .lead{color:#f3e9d9;font-size:1.08rem;max-width:720px}
+.poster-wrap{background:#f2e8da;padding:10px;border-radius:14px;box-shadow:0 15px 45px rgba(0,0,0,.3);max-width:410px;margin:auto}
+.poster-wrap img{display:block;width:100%;height:auto;border-radius:8px}
+.btn-gold{background:var(--gold);color:#2f1712;border:0;font-weight:700;padding:12px 22px}.btn-gold:hover{background:var(--gold2);color:#2f1712}
+.info-strip{margin-top:-30px;position:relative;z-index:5}.info-card{background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:0 8px 25px rgba(58,30,15,.10);padding:22px;height:100%}
+.info-card i{color:var(--gold);font-size:1.45rem}.info-card .label{color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:1px}.info-card .value{font-weight:700;margin-top:3px}
+.section-title{color:var(--maroon);font-family:Georgia,serif;font-weight:700;border-left:5px solid var(--gold);padding-left:14px}
+.intro{font-size:1.08rem;line-height:1.85}
+.roadmap{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:26px}
+.step{display:flex;align-items:flex-start;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}.step:last-child{border-bottom:0}
+.step-no{width:34px;height:34px;border-radius:50%;background:var(--maroon);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;flex:0 0 auto}
+.search-wrap{background:var(--maroon);padding:24px;border-radius:16px;color:#fff}.search-wrap input{border:0;padding:14px 16px;border-radius:10px;font-size:1rem}
+.resource-section{background:var(--paper);border:1px solid var(--line);border-radius:16px;margin-bottom:24px;overflow:hidden;box-shadow:0 5px 18px rgba(58,30,15,.06)}
+.resource-section-head{padding:22px 24px;background:linear-gradient(90deg,#fbf7ef,#fffdf9);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:15px}
+.resource-section-head h2{color:var(--maroon);font-size:1.45rem;margin:0 0 5px}.resource-section-head p{margin:0;color:var(--muted)}
+.count-badge{background:var(--maroon);color:#fff;border-radius:999px;padding:7px 13px;font-weight:700;white-space:nowrap}
+.resource-list{padding:0 24px}.resource-item{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:16px 0;border-bottom:1px solid var(--line)}
+.resource-item:last-child{border-bottom:0}.resource-info{display:flex;gap:14px;align-items:center;min-width:0}
+.file-icon{width:42px;height:42px;border-radius:10px;background:#f1e6dc;color:var(--maroon);display:flex;align-items:center;justify-content:center;flex:0 0 auto;font-size:1.2rem}
+.resource-title{font-weight:650;line-height:1.4}.resource-meta{color:var(--muted);font-size:.82rem;margin-top:3px}
+.resource-actions{display:flex;gap:7px;flex:0 0 auto}.btn-view{border:1px solid #b9aaa0;color:var(--maroon);background:#fff}.btn-view:hover{background:#f6eee6;color:var(--maroon)}
+.btn-download{background:var(--maroon);color:#fff;border:1px solid var(--maroon)}.btn-download:hover{background:var(--maroon2);color:#fff}
+.empty{display:none;text-align:center;padding:40px;color:var(--muted)}
+.upcoming{background:linear-gradient(135deg,#fffaf2,#f0e4d3);border:1px solid var(--line);border-radius:16px;padding:28px}
+footer{background:#3a0d0d;color:#eadfce;padding:34px 0;margin-top:60px}footer .brand{color:#fff;font-family:Georgia,serif;font-size:1.35rem;font-weight:700}
+@media(max-width:767px){.hero{padding:58px 0}.hero h1{font-size:2.65rem}.resource-item{align-items:flex-start;flex-direction:column}.resource-actions{width:100%}.resource-actions .btn{flex:1}.resource-list{padding:0 16px}.resource-section-head{padding:18px}}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top"><div class="container">
+<a class="navbar-brand" href="#">THE WEDNESDAY CLUB</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="mainNav"><ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#programme">Programme</a></li>
+<li class="nav-item"><a class="nav-link" href="#roadmap">Study Roadmap</a></li>
+<li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
+</ul></div></div></nav>
+
+<section class="hero" id="programme"><div class="container hero-inner"><div class="row align-items-center g-5">
+<div class="col-lg-7"><div class="eyebrow">Kerala High Court Advocates' Association</div>
+<h1>The Wednesday Club</h1><h2>Legal Lecture &amp; Learning Series</h2>
+<div class="mt-4"><div class="eyebrow">Special Session</div>
+<h2 style="color:#fff;font-weight:700;">The Doctrine of Legitimate Expectation:<br>Estopped or Entitled?</h2>
+<p class="lead mt-3">A session led by <strong>Adv. P. Chandrasekhar</strong>, with panel discussion and supporting research materials.</p></div>
+<a href="#resources" class="btn btn-gold btn-lg mt-3"><i class="bi bi-folder2-open"></i> Access Resources</a>
+</div>
+<div class="col-lg-5"><div class="poster-wrap"><img src="next-program.jpg" alt="Wednesday Club - The Doctrine of Legitimate Expectation"></div></div>
+</div></div></section>
+
+<section class="info-strip"><div class="container"><div class="row g-3">
+<div class="col-md-4"><div class="info-card"><i class="bi bi-calendar-event"></i><div class="label mt-2">Date</div><div class="value">16 September 2026</div></div></div>
+<div class="col-md-4"><div class="info-card"><i class="bi bi-clock"></i><div class="label mt-2">Time</div><div class="value">4:45 PM</div></div></div>
+<div class="col-md-4"><div class="info-card"><i class="bi bi-geo-alt"></i><div class="label mt-2">Venue</div><div class="value">KHCAA Hall</div></div></div>
+</div></div></section>
+
+<section class="container my-5"><div class="row g-5">
+<div class="col-lg-8"><h2 class="section-title">About the Session</h2>
+<p class="intro mt-4">The Wednesday Club presents a session on <strong>The Doctrine of Legitimate Expectation: Estopped or Entitled?</strong>. This portal brings together the research notes, articles, books and case law collected for the academic discussion.</p>
+<p class="intro">The materials are provided as a convenient reading and reference library for participants and members of the legal community.</p></div>
+<div class="col-lg-4"><div class="info-card"><h4 class="serif" style="color:var(--maroon);">Programme Team</h4><hr>
+<p><strong>Panelists</strong><br>Anchalа C<br>Anjali Menon</p>
+<p><strong>MC</strong><br>Divya Devi VG</p>
+<p><strong>Research Team</strong><br>Parvathy Kaprat · Anupama S · Sai Pooja<br>Haroon Ashraf · Meena Prakash · Neenu Pavithran</p>
+<p class="mb-0"><strong>Technical Support</strong><br>Uma S Nair · Uttara PV</p></div></div>
+</div></section>
+
+<section class="container mb-5" id="roadmap"><h2 class="section-title">Learning Roadmap</h2>
+<div class="roadmap mt-4">
+<div class="step"><div class="step-no">1</div><div><strong>Research Notes</strong><br><span class="text-muted">Begin with the prepared research and concept notes.</span></div></div>
+<div class="step"><div class="step-no">2</div><div><strong>Articles &amp; Reference Material</strong><br><span class="text-muted">Read the collected explanatory material.</span></div></div>
+<div class="step"><div class="step-no">3</div><div><strong>Books Referred</strong><br><span class="text-muted">Consult the books and reference material.</span></div></div>
+<div class="step"><div class="step-no">4</div><div><strong>Case Law</strong><br><span class="text-muted">Study the selected judgments and authorities.</span></div></div>
+</div></section>
+
+<section class="container mb-5" id="resources"><h2 class="section-title">Resource Library</h2>
+<p class="mt-3 text-muted">Browse the material below or search for a particular case, article or document.</p>
+<div class="search-wrap my-4"><div class="row align-items-center g-3"><div class="col-lg-4"><strong><i class="bi bi-search"></i> Search Resources</strong><div class="small mt-1" style="color:#eadfce;">24 documents available</div></div>
+<div class="col-lg-8"><input id="resourceSearch" class="form-control" type="search" placeholder="Search by case name, article or document title..."></div></div></div>
+<div id="resourceContainer">
+    <section class="resource-section" data-category="Research Notes">
+      <div class="resource-section-head">
+        <div><h2><i class="bi bi-journal-text"></i> Research Notes</h2><p>Research material prepared for the programme.</p></div>
+        <span class="count-badge">2</span>
+      </div>
+      <div class="resource-list">
+        <div class="resource-item">
+          <div class="resource-info">
+            <div class="file-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+            <div>
+              <div class="resource-title">Summary of Important Cases</div>
+              <div class="resource-meta">PDF · 0.10 MB</div>
+            </div>
+          </div>
+          <div class="resource-actions">
+            <a href="https://drive.google.com/file/d/1RpdCU4AtFH5W5W_PhZzSSD89i9HhCuTv/view" target="_blank" rel="noopener" class="btn btn-view"><i class="bi bi-eye"></i> View</a>
+            <a href="https://drive.google.com/uc?export=download&amp;id=1RpdCU4AtFH5W5W_PhZzSSD89i9HhCuTv" class="btn btn-download"><i class="bi bi-download"></i> Download</a>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <div class="file-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+            <div>
+              <div class="resource-title">Doctrine of Legitimate Expectations- Concept Note</div>
+              <div class="resource-meta">PDF · 0.24 MB</div>
+            </div>
+          </div>
+          <div class="resource-actions">
+            <a href="https://drive.google.com/file/d/1W7CCT_MOySvn8QA5i9aIna8buTNeDwP4/view" target="_blank" rel="noopener" class="btn btn-view"><i class="bi bi-eye"></i> View</a>
+            <a href="https://drive.google.com/uc?export=download&amp;id=1W7CCT_MOySvn8QA5i9aIna8buTNeDwP4" class="btn btn-download"><i class="bi bi-download"></i> Download</a>
+          </div>
+        </div></div>
+    </section>
+    <section class="resource-section" data-category="Articles &amp; Reference Material">
+      <div class="resource-section-head">
+        <div><h2><i class="bi bi-file-earmark-richtext"></i> Articles & Reference Material</h2><p>Articles and explanatory material on the doctrine.</p></div>
+        <span class="count-badge">7</span>
+      </div>
+      <div class="resource-list">
+        <div class="resource-item">
+          <div class="resource-info">
+            <div class="file-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+            <div>
+              <div class="resource-title">The Doctrine of Substantive Legitimate Expectation</div>
+              <div class="resource-meta">PDF · 0.16 MB</div>
+            </div>
+          </div>
+          <div class="resource-actions">
+            <a href="https://drive.google.com/file/d/1Wct_itBIEkT1cCxMyXs0ou8_yCxWlfLV/view" target="_blank" rel="noopener" class="btn btn-view"><i class="bi bi-eye"></i> View</a>
+            <a href="https://drive.google.com/uc?export=download&amp;id=1Wct_itBIEkT1cCxMyXs0ou8_yCxWlfLV" class="btn btn-download"><i class="bi bi-download"></i> Download</a>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <div class="file-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+            <div>
+              <div class="resource-title">Legal Notes by Arvind Datar Legitimate Expectation – The Origin, The Procedural and Substantive Aspects</div>
+              <div class="resource-meta">PDF · 1.56 MB</div>
+            </div>
+          </div>
+          <div class="resource-actions">
+            <a href="https://drive.google.com/file/d/1Lzb1dpXnuunzYB40rCAKxU1dOUnHJCqy/view" target="_blank" rel="noopener" class="btn btn-view"><i class="bi bi-eye"></i> View</a>
+            <a href="https://drive.google.com/uc?export=download&amp;id=1Lzb1dpXnuunzYB40rCAKxU1dOUnHJCqy" class="btn btn-download"><i class="bi bi-download"></i> Download</a>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <div class="file-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+            <div>
+              <div class="resource-title">Legitimate Expectation and Article 14</div>
+              <div class="resource-meta">PDF · 1.55 MB</div>
+            </div>
+          </div>
+          <div class="resource-actions">
+            <a href="https://drive.google.com/file/d/1QgXmfMlUnO_z83n5rEGcqR3oT3uP6kt4/view" target="_blank" rel="noopener" class="btn btn-view"><i class="bi bi-eye"></i> View</a>
+            <a href="https://drive.google.com/uc?export=download&amp;id=1QgXmfMlUnO_z83n5rEGcqR3oT3uP6kt4" class="btn btn-download"><i class="bi bi-download"></i> Download</a>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <div class="file-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+            <div>
+              <div class="resource-title">Law of Subaltern</div>
+              <div class="resource-meta">PDF · 27.51 MB</div>
+            </div>
+          </div>
+          <div class="resource-actions">
+            <a href="https://drive.google.com/file/d/17C3BdISATmAAuBcjx03Vh2i8nUHawdVw/view" target="_blank" rel="noopener" class="btn btn-view"><i class="bi bi-eye"></i> View</a>
+            <a href="https://drive.google.com/uc?export=download&amp;id=17C3BdISATmAAuBcjx03Vh2i8nUHawdVw" class="btn btn-download"><i class="bi bi-download"></i> Download</a>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <div class="file-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+            <div>
+              <div class="resource-title">Supreme Court Explains Doctrine of Legitimate Expectation</div>
+              <div class="resource-meta">PDF · 0.77 MB</div>
+            </div>
+          </div>
+          <div class="resource-actions">
+            <a href="https://drive.google.com/file/d/1YclPRuxX-X2tHzyc0q9NSkpLs0-lAP5H/view" target="_blank" rel="noopener" class="btn btn-view"><i class="bi bi-eye"></i> View</a>
+            <a href="https://drive.google.com/uc?export=download&amp;id=1YclPRuxX-X2tHzyc0q9NSkpLs0-lAP5H" class="btn btn-download"><i class="bi bi-download"></i> Download</a>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <div class="file-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+            <div>
+              <div class="resource-title">Research article - doctrine of legitimate expectation</div>
+              <div class="resource-meta">PDF · 1.05 MB</div>
+            </div>
+          </div>
+          <div class="resource-actions">
+            <a href="https://drive.google.com/file/d/1faD5gcGVLvuCGttuAZr0rWNc9Yn1RW9t/view" target="_blank" rel="noopener" class="btn btn-view"><i class="bi bi-eye"></i> View</a>
+            <a href="https://drive.google.com/uc?export=download&amp;id=1faD5gcGVLvuCGttuAZr0rWNc9Yn1RW9t" class="btn btn-download"><i class="bi bi-download"></i> Download</a>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <div class="file-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+            <div>
+              <div class="resource-title">Prongs of Doctrine of Legitimate Expectation</div>
+              <div class="resource-meta">PDF · 0.35 MB</div>
+            </div>
+          </div>
+          <div class="resource-actions">
+            <a href="https://drive.google.com/file/d/1c3q46nccED4OK01oKFdl5ec4BopSPlAj/view" target="_blank" rel="noopener" class="btn btn-view"><i class="bi bi-eye"></i> View</a>
+            <a href="https://drive.google.com/uc?export=download&amp;id=1c3q46nccED4OK01oKFdl5ec4BopSPlAj" class="btn btn-download"><i class="bi bi-download"></i> Download</a>
+          </div>
+        </div></div>
+    </section>
+    <section class="resource-section" data-category="Books Referred">
+      <div class="resource-section-head">
+        <div><h2><i class="bi bi-book"></i> Books Referred</h2><p>Books and reference material used for the programme.</p></div>
+        <span class="count-badge">1</span>
+      </div>
+      <div class="resource-list">
+        <div class="resource-item">
+          <div class="resource-info">
+            <div class="file-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+            <div>
+              <div class="resource-title">scan</div>
+              <div class="resource-meta">PDF · 27.51 MB</div>
+            </div>
+          </div>
+          <div class="resource-actions">
+            <a href="https://drive.google.com/file/d/1OcmuFt1VCW9OBH717NlQO4rLxCLXfRDi/view" target="_blank" rel="noopener" class="btn btn-view"><i class="bi bi-eye"></i> View</a>
+            <a href="https://drive.google.com/uc?export=download&amp;id=1OcmuFt1VCW9OBH717NlQO4rLxCLXfRDi" class="btn btn-download"><i class="bi bi-download"></i> Download</a>
+          </div>
+        </div></div>
+    </section>
+    <section class="resource-section" data-category="Cases">
+      <div class="resource-section-head">
+        <div><h2><i class="bi bi-bank"></i> Cases</h2><p>Judgments and authorities collected for the discussion.</p></div>
+        <span class="count-badge">14</span>
+      </div>
+      <div class="resource-list">
+        <div class="resource-item">
+          <div class="resource-info">
+            <div class="file-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+            <div>
+              <div class="resource-title">Rainbow Insurance Company Ltd v. Financial Services Commission (Mauritius) (Privy Council)</div>
+              <div class="resource-meta">PDF · 0.20 MB</div>
+            </div>
+          </div>
+          <div class="resource-actions">
+            <a href="https://drive.google.com/file/d/1ImKznAyoZBoWbrYPVbJhgBQnRl6WkFE5/view" target="_blank" rel="noopener" class="btn btn-view"><i class="bi bi-eye"></i> View</a>
+            <a href="https://drive.google.com/uc?export=download&amp;id=1ImKznAyoZBoWbrYPVbJhgBQnRl6WkFE5" class="btn btn-download"><i class="bi bi-download"></i> Download</a>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <div class="file-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+            <div>
+              <div class="resource-title">Coughlan judgment</div>
+              <div class="resource-meta">PDF · 0.45 MB</div>
+            </div>
+          </div>
+          <div class="resource-actions">
+            <a href="https://drive.google.com/file/d/1HUKGNEa4MtG8Ve3K_sL8GYpbj6eRNYdf/view" target="_blank" rel="noopener" class="btn btn-view"><i class="bi bi-eye"></i> View</a>
+            <a href="https://drive.google.com/uc?export=download&amp;id=1HUKGNEa4MtG8Ve3K_sL8GYpbj6eRNYdf" class="btn btn-download"><i class="bi bi-download"></i> Download</a>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <div class="file-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+            <div>
+              <div class="resource-title">Govindan v. Cochin Shipyard</div>
+              <div class="resource-meta">PDF · 0.43 MB</div>
+            </div>
+          </div>
+          <div class="resource-actions">
+            <a href="https://drive.google.com/file/d/1Fcz8LaJ2WPnH4OJS5gmCsn0pL9rtobW6/view" target="_blank" rel="noopener" class="btn btn-view"><i class="bi bi-eye"></i> View</a>
+            <a href="https://drive.google.com/uc?export=download&amp;id=1Fcz8LaJ2WPnH4OJS5gmCsn0pL9rtobW6" class="btn btn-download"><i class="bi bi-download"></i> Download</a>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <div class="file-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+            <div>
+              <div class="resource-title">Domestic On-Grid Solar Prosumers Forum v. KSERC</div>
+              <div class="resource-meta">PDF · 0.40 MB</div>
+            </div>
+          </div>
+          <div class="resource-actions">
+            <a href="https://drive.google.com/file/d/1cL_1xvMjoqf1YM2-eUWYJB9519Sg1-hW/view" target="_blank" rel="noopener" class="btn btn-view"><i class="bi bi-eye"></i> View</a>
+            <a href="https://drive.google.com/uc?export=download&amp;id=1cL_1xvMjoqf1YM2-eUWYJB9519Sg1-hW" class="btn btn-download"><i class="bi bi-download"></i> Download</a>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <div class="file-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+            <div>
+              <div class="resource-title">Fergusan v. Attorney General Trinidad and Tobago</div>
+              <div class="resource-meta">PDF · 0.23 MB</div>
+            </div>
+          </div>
+          <div class="resource-actions">
+            <a href="https://drive.google.com/file/d/1tnGnRKBA6UhIaWa-EvuvqR8WmxxD4nYG/view" target="_blank" rel="noopener" class="btn btn-view"><i class="bi bi-eye"></i> View</a>
+            <a href="https://drive.google.com/uc?export=download&amp;id=1tnGnRKBA6UhIaWa-EvuvqR8WmxxD4nYG" class="btn btn-download"><i class="bi bi-download"></i> Download</a>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <div class="file-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+            <div>
+              <div class="resource-title">Tej Prakash Pathak and Ors vs Rajasthan High CourtSC20240811241801391COM661898</div>
+              <div class="resource-meta">PDF · 0.34 MB</div>
+            </div>
+          </div>
+          <div class="resource-actions">
+            <a href="https://drive.google.com/file/d/1u4aCEWa5kCF_OhkqS-rWITj_owiEWUZo/view" target="_blank" rel="noopener" class="btn btn-view"><i class="bi bi-eye"></i> View</a>
+            <a href="https://drive.google.com/uc?export=download&amp;id=1u4aCEWa5kCF_OhkqS-rWITj_owiEWUZo" class="btn btn-download"><i class="bi bi-download"></i> Download</a>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <div class="file-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+            <div>
+              <div class="resource-title">Union of India UOI and Ors vs Hindustan Developmen1218s940331COM155591</div>
+              <div class="resource-meta">PDF · 0.13 MB</div>
+            </div>
+          </div>
+          <div class="resource-actions">
+            <a href="https://drive.google.com/file/d/19QvHhaPd_ODYeBnjC5t10y8Pn-eqOQrA/view" target="_blank" rel="noopener" class="btn btn-view"><i class="bi bi-eye"></i> View</a>
+            <a href="https://drive.google.com/uc?export=download&amp;id=19QvHhaPd_ODYeBnjC5t10y8Pn-eqOQrA" class="btn btn-download"><i class="bi bi-download"></i> Download</a>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <div class="file-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+            <div>
+              <div class="resource-title">Food Corporation of India vs Kamdhenu Cattle Feed 0229s930168COM437895</div>
+              <div class="resource-meta">PDF · 0.08 MB</div>
+            </div>
+          </div>
+          <div class="resource-actions">
+            <a href="https://drive.google.com/file/d/1-Of2PtYUiitTgK_pegWyAvOf2yoz6I1k/view" target="_blank" rel="noopener" class="btn btn-view"><i class="bi bi-eye"></i> View</a>
+            <a href="https://drive.google.com/uc?export=download&amp;id=1-Of2PtYUiitTgK_pegWyAvOf2yoz6I1k" class="btn btn-download"><i class="bi bi-download"></i> Download</a>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <div class="file-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+            <div>
+              <div class="resource-title">Punjab Communications Ltd vs Union of India UOI an0828s990476COM645865</div>
+              <div class="resource-meta">PDF · 0.22 MB</div>
+            </div>
+          </div>
+          <div class="resource-actions">
+            <a href="https://drive.google.com/file/d/1cyGE0_CHBO2ZY863SX7rhGHzrfQ_b0U6/view" target="_blank" rel="noopener" class="btn btn-view"><i class="bi bi-eye"></i> View</a>
+            <a href="https://drive.google.com/uc?export=download&amp;id=1cyGE0_CHBO2ZY863SX7rhGHzrfQ_b0U6" class="btn btn-download"><i class="bi bi-download"></i> Download</a>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <div class="file-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+            <div>
+              <div class="resource-title">The State of Jharkhand and Ors vs Brahmputra MetalSC2020021220160216140COM653031</div>
+              <div class="resource-meta">PDF · 0.33 MB</div>
+            </div>
+          </div>
+          <div class="resource-actions">
+            <a href="https://drive.google.com/file/d/1-co6D1wivzXIJSa6WPkMf4ztyciEy-V1/view" target="_blank" rel="noopener" class="btn btn-view"><i class="bi bi-eye"></i> View</a>
+            <a href="https://drive.google.com/uc?export=download&amp;id=1-co6D1wivzXIJSa6WPkMf4ztyciEy-V1" class="btn btn-download"><i class="bi bi-download"></i> Download</a>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <div class="file-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+            <div>
+              <div class="resource-title">Ram Pravesh Singh and Ors vs State of Bihar and OrS060724COM909342</div>
+              <div class="resource-meta">PDF · 0.22 MB</div>
+            </div>
+          </div>
+          <div class="resource-actions">
+            <a href="https://drive.google.com/file/d/15FcqCRo89HsZp4GjHRbBFRzNOPfXNM1j/view" target="_blank" rel="noopener" class="btn btn-view"><i class="bi bi-eye"></i> View</a>
+            <a href="https://drive.google.com/uc?export=download&amp;id=15FcqCRo89HsZp4GjHRbBFRzNOPfXNM1j" class="btn btn-download"><i class="bi bi-download"></i> Download</a>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <div class="file-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+            <div>
+              <div class="resource-title">Union of India UOI and Ors vs Hindustan Developmen0917s940330COM41495</div>
+              <div class="resource-meta">PDF · 0.49 MB</div>
+            </div>
+          </div>
+          <div class="resource-actions">
+            <a href="https://drive.google.com/file/d/1v3pJDHUHlDAYDVsAEQx-WjEW3NYjzABc/view" target="_blank" rel="noopener" class="btn btn-view"><i class="bi bi-eye"></i> View</a>
+            <a href="https://drive.google.com/uc?export=download&amp;id=1v3pJDHUHlDAYDVsAEQx-WjEW3NYjzABc" class="btn btn-download"><i class="bi bi-download"></i> Download</a>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <div class="file-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+            <div>
+              <div class="resource-title">Punjab Communications Ltd vs Union of India UOI an0828s990476COM146011</div>
+              <div class="resource-meta">PDF · 0.23 MB</div>
+            </div>
+          </div>
+          <div class="resource-actions">
+            <a href="https://drive.google.com/file/d/1p1DueMLzuvh-QTuhgFRESzfQzqo0pxQg/view" target="_blank" rel="noopener" class="btn btn-view"><i class="bi bi-eye"></i> View</a>
+            <a href="https://drive.google.com/uc?export=download&amp;id=1p1DueMLzuvh-QTuhgFRESzfQzqo0pxQg" class="btn btn-download"><i class="bi bi-download"></i> Download</a>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <div class="file-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+            <div>
+              <div class="resource-title">Council of civil service unions and ors. and Minister of the Civil Service</div>
+              <div class="resource-meta">PDF · 0.53 MB</div>
+            </div>
+          </div>
+          <div class="resource-actions">
+            <a href="https://drive.google.com/file/d/1ye9v4d5OjXXz_34kGJvuwHF4_I1BGh64/view" target="_blank" rel="noopener" class="btn btn-view"><i class="bi bi-eye"></i> View</a>
+            <a href="https://drive.google.com/uc?export=download&amp;id=1ye9v4d5OjXXz_34kGJvuwHF4_I1BGh64" class="btn btn-download"><i class="bi bi-download"></i> Download</a>
+          </div>
+        </div></div>
+    </section></div>
+<div id="noResults" class="empty"><i class="bi bi-search" style="font-size:2rem;"></i><h4 class="serif mt-3">No matching resources</h4><p>Try a different search term.</p></div>
+</section>
+
+<section class="container mb-5"><div class="upcoming"><div class="eyebrow" style="color:var(--maroon);">The Wednesday Club</div>
+<h2 class="serif mt-2" style="color:var(--maroon);">Continuing the Lecture &amp; Learning Series</h2>
+<p class="mb-0" style="font-size:1.05rem;line-height:1.7;">Further programmes and associated learning resources will be added to this portal as the Wednesday Club series continues.</p></div></section>
+
+<footer><div class="container text-center"><div class="brand">The Wednesday Club</div><p class="mt-2 mb-1">Kerala High Court Advocates' Association</p><p class="small mb-0">© 2026 The Wednesday Club</p></div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const searchInput=document.getElementById('resourceSearch');
+const sections=document.querySelectorAll('.resource-section');
+const noResults=document.getElementById('noResults');
+searchInput.addEventListener('input',function(){
+ const q=this.value.trim().toLowerCase(); let totalVisible=0;
+ sections.forEach(section=>{
+   const items=section.querySelectorAll('.resource-item'); let visible=0;
+   items.forEach(item=>{const match=item.innerText.toLowerCase().includes(q);item.style.display=match?'':'none';if(match)visible++;});
+   section.style.display=visible?'':'none'; totalVisible+=visible;
+ });
+ noResults.style.display=totalVisible?'none':'block';
+});
+</script>
+</body>
+</html>
