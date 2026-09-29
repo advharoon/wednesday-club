@@ -1,1 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>The Wednesday Club | Kerala High Court Advocates' Association</title>
+<meta name="description" content="The Wednesday Club of the Kerala High Court Advocates' Association — lectures, discussions and legal learning resources.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --maroon: #6f1020;
+    --dark: #26070d;
+    --gold: #c9a24a;
+    --gold-light: #e7ca7a;
+    --cream: #fbf7ee;
+    --paper: #fffdf8;
+    --text: #30272a;
+    --muted: #756a6c;
+    --border: #e7dcc8;
+    --shadow: 0 14px 40px rgba(38, 7, 13, .10);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    color: var(--text);
+    background: var(--cream);
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(38, 7, 13, .97);
+    border-bottom: 1px solid rgba(201, 162, 74, .45);
+}
+
+.nav-inner {
+    max-width: 1180px;
+    margin: auto;
+    padding: 14px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    color: white;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: .4px;
+}
+
+.brand span {
+    display: block;
+    color: var(--gold-light);
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    color: #f8ead0;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.nav-links a:hover { color: var(--gold-light); }
+
+.hero {
+    background:
+        radial-gradient(circle at 80% 20%, rgba(201,162,74,.18), transparent 30%),
+        linear-gradient(135deg, #26070d 0%, #5c0d1b 55%, #781426 100%);
+    color: white;
+    padding: 88px 22px 82px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero:after {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border: 1px solid rgba(201,162,74,.25);
+    pointer-events: none;
+}
+
+.hero-inner {
+    max-width: 980px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.eyebrow {
+    color: var(--gold-light);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(50px, 8vw, 82px);
+    line-height: .95;
+    font-weight: 700;
+}
+
+.hero .subtitle {
+    margin: 22px auto 0;
+    max-width: 680px;
+    font-size: 16px;
+    color: #f5e8d2;
+}
+
+.gold-line {
+    width: 90px;
+    height: 2px;
+    background: var(--gold);
+    margin: 28px auto;
+}
+
+.section {
+    max-width: 1180px;
+    margin: auto;
+    padding: 72px 22px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.section-heading .eyebrow { color: var(--maroon); }
+
+.section-heading h2 {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 44px;
+    color: var(--dark);
+}
+
+.section-heading p {
+    max-width: 700px;
+    margin: 10px auto 0;
+    color: var(--muted);
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 0;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.feature-image {
+    min-height: 460px;
+    background: linear-gradient(145deg, #3a0a12, #7a1526);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.feature-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature-image .fallback {
+    padding: 45px;
+    color: white;
+    text-align: center;
+}
+
+.feature-image .fallback strong {
+    display: block;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 34px;
+    color: var(--gold-light);
+    line-height: 1.05;
+}
+
+.feature-content {
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feature-label {
+    color: var(--maroon);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.feature h3 {
+    font-family: "Cormorant Garamond", serif;
+    color: var(--dark);
+    font-size: 40px;
+    line-height: 1.08;
+    margin: 12px 0 18px;
+}
+
+.feature .speaker {
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.meta {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 26px;
+}
+
+.meta div { margin: 5px 0; }
+
+.btn {
+    display: inline-block;
+    width: fit-content;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .2px;
+    transition: .2s ease;
+}
+
+.btn-primary {
+    background: var(--maroon);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #4e0b16;
+    transform: translateY(-1px);
+}
+
+.programmes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.card {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(38,7,13,.06);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-top {
+    height: 8px;
+    background: var(--maroon);
+}
+
+.card-body {
+    padding: 28px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-date {
+    color: var(--maroon);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.card h3 {
+    margin: 12px 0 14px;
+    color: var(--dark);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 29px;
+    line-height: 1.08;
+}
+
+.card p {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 0 0 22px;
+}
+
+.card .btn { margin-top: auto; }
+
+.archive-note {
+    margin-top: 35px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.about-strip {
+    background: white;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.about-inner {
+    max-width: 850px;
+    margin: auto;
+    padding: 58px 22px;
+    text-align: center;
+}
+
+.about-inner h2 {
+    margin: 0 0 12px;
+    color: var(--dark);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 38px;
+}
+
+.about-inner p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+footer {
+    background: var(--dark);
+    color: #eadfc9;
+    text-align: center;
+    padding: 35px 20px;
+    font-size: 12px;
+}
+
+footer strong {
+    display: block;
+    color: var(--gold-light);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 850px) {
+    .nav-links { gap: 12px; }
+    .feature { grid-template-columns: 1fr; }
+    .feature-image { min-height: 380px; }
+    .programmes { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .nav-inner { padding: 12px 16px; }
+    .brand { font-size: 23px; }
+    .nav-links a:not(:last-child) { display: none; }
+    .hero { padding: 68px 18px; }
+    .hero:after { inset: 10px; }
+    .section { padding: 55px 16px; }
+    .feature-content { padding: 30px 24px; }
+    .feature h3 { font-size: 34px; }
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="nav-inner">
+        <a class="brand" href="index.html">
+            The Wednesday Club
+            <span>Kerala High Court Advocates' Association</span>
+        </a>
+        <div class="nav-links">
+            <a href="#upcoming">Upcoming</a>
+            <a href="#programmes">Programmes</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="hero-inner">
+        <div class="eyebrow">An Initiative of the KHCAA</div>
+        <h1>The Wednesday Club</h1>
+        <div class="gold-line"></div>
+        <div class="subtitle">
+            A continuing platform for lectures, discussion, research and professional learning
+            among members of the legal community.
+        </div>
+    </div>
+</header>
+
+<main>
+
+<section class="section" id="upcoming">
+    <div class="section-heading">
+        <div class="eyebrow">Upcoming Programme</div>
+        <h2>Criminal Law Lecture Series</h2>
+        <p>Explore the current programme and its accompanying learning resources.</p>
+    </div>
+
+    <div class="feature">
+        <div class="feature-image">
+            <img src="crl-law2.jpg"
+                 alt="A Session on the Making of a Penal Statute and How to Read It"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="fallback" style="display:none;">
+                <strong>A Session on the Making of a Penal Statute and How to Read It</strong>
+            </div>
+        </div>
+
+        <div class="feature-content">
+            <div class="feature-label">30 September 2026</div>
+            <h3>A Session on the Making of a Penal Statute and How to Read It</h3>
+            <div class="speaker">Speaker: Adv. John S. Ralph</div>
+
+            <div class="meta">
+                <div>◈ <strong>Time:</strong> 4:40 PM onwards</div>
+                <div>◈ <strong>Venue:</strong> KHCAA Hall, High Court of Kerala</div>
+            </div>
+
+            <a class="btn btn-primary" href="crl-law2.html">
+                View Programme &amp; Resources →
+            </a>
+        </div>
+    </div>
+</section>
+
+<div class="about-strip">
+    <div class="about-inner">
+        <h2>Programmes &amp; Resources</h2>
+        <p>
+            Each Wednesday Club programme has its own page containing programme details,
+            speakers, research material, judgments, papers, videos and other resources
+            associated with the session.
+        </p>
+    </div>
+</div>
+
+<section class="section" id="programmes">
+    <div class="section-heading">
+        <div class="eyebrow">Programme Archive</div>
+        <h2>Explore the Sessions</h2>
+        <p>Previous and current programmes of the Wednesday Club.</p>
+    </div>
+
+    <div class="programmes">
+
+        <article class="card">
+            <div class="card-top"></div>
+            <div class="card-body">
+                <div class="card-date">05 August 2026</div>
+                <h3>Principles of Appreciation of Evidence</h3>
+                <p>
+                    Criminal Law Lecture Series — a session led by
+                    Justice Jobin Sebastian, Judge, High Court of Kerala.
+                </p>
+                <a class="btn btn-primary" href="crl-law1.html">
+                    View Programme →
+                </a>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-top"></div>
+            <div class="card-body">
+                <div class="card-date">16 September 2026</div>
+                <h3>The Doctrine of Legitimate Expectation: Estopped or Entitled?</h3>
+                <p>
+                    A session led by Adv. P. Chandrasekhar, with programme resources
+                    and research material.
+                </p>
+                <a class="btn btn-primary" href="Llegtmt_expecta.html">
+                    View Programme →
+                </a>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-top"></div>
+            <div class="card-body">
+                <div class="card-date">30 September 2026</div>
+                <h3>A Session on the Making of a Penal Statute and How to Read It</h3>
+                <p>
+                    Criminal Law Lecture Series with Adv. John S. Ralph.
+                    Programme resources are available on the session page.
+                </p>
+                <a class="btn btn-primary" href="crl-law2.html">
+                    View Programme →
+                </a>
+            </div>
+        </article>
+
+    </div>
+
+    <div class="archive-note">
+        More Wednesday Club programmes and resources can be added here as the series continues.
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <strong>The Wednesday Club</strong>
+    Kerala High Court Advocates' Association
+    <br>
+    <span>Legal learning • Discussion • Professional development</span>
+</footer>
+
+</body>
+</html>
